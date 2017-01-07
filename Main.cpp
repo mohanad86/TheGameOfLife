@@ -1,25 +1,28 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 
 int main()
-{
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
-
+{	
+	
+	//starting with the window
+	sf::RenderWindow window(sf::VideoMode(600, 600), "Welcome to Mohanad Game of life");
 	while (window.isOpen())
 	{
 		sf::Event event;
-		while (window.pollEvent(event))
+		while (window.waitEvent(event))
 		{
-			if (event.type == sf::Event::Closed)
+			switch (event.type)
+			{
+			case sf::Event::Closed:
+			{
 				window.close();
+			}break;
+			case sf::Event::Resized:
+			{
+			}break;
+			}
 		}
-
-		window.clear();
-		window.draw(shape);
 		window.display();
 	}
-
-	return 0;
 }
