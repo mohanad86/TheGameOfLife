@@ -30,11 +30,9 @@ int main()
 
 			}
 
-		}
 
-		
-		
-		window.display();
-	
+			window.display();
+
+		}
 	}
 }

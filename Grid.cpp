@@ -15,7 +15,6 @@ Grid::Grid()
 				setGridSprite.setPosition(j * 32, i * 32);
 				setGridSprite.setTextureRect(sf::IntRect(Grid.x * 20, Grid.y * 20, 20, 20));
 
-
 			}
 
 	}
@@ -24,4 +23,5 @@ Grid::Grid()
 
 void Grid::drawable(RenderWindow &grid)
 {
+
 }
