@@ -7,7 +7,6 @@ using namespace sf;
 
 Cell::Cell() {
 
-	int alivecells;
 	int x = 0;
 	int y = 0;
 	sf::RectangleShape rectangle(sf::Vector2f(20, 20));
@@ -16,19 +15,23 @@ Cell::Cell() {
 	rectangle.setSize(sf::Vector2f(1, 1));
 	rectangle.setPosition(x, y);
 	rectangle.setFillColor(Color::Blue);
-
-
-
-	if (alivecells)
-
-		rectangle.setFillColor(Color::White);
-	else
-		rectangle.setFillColor(Color::Blue);
 }
+	
+	int alivecells;
+	void Cell::TargetIsAlive(int TargetAlive) {
+		if (alivecells)
+
+			rectangle.setFillColor(Color::White);
+		else
+			rectangle.setFillColor(Color::Blue);
+		
+}
+
+	
 
 
 void Cell::draw(RenderWindow &window) {
 
-	window.draw(Rect);
+	window.draw(rectangle);
 }
 

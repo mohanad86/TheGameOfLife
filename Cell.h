@@ -6,10 +6,10 @@ class Cell {
 
 private:
 
-	RectangleShape Rect;
+	RectangleShape rectangle;
 
 public:
-
+	void TargetIsAlive(int TargetAlive);
 	void draw(RenderWindow &window);
 	Cell();
 };
