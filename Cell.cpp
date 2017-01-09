@@ -17,21 +17,20 @@ Cell::Cell() {
 	rectangle.setFillColor(Color::Blue);
 }
 	
-	int alivecells;
-	void Cell::TargetIsAlive(int TargetAlive) {
-		if (alivecells)
+	void Cell::SetTargetAlive(bool TargetAlive) {
+		
+		if (TargetAlive)
 
-			rectangle.setFillColor(Color::White);
+			rectangle.setFillColor(Color::Red);
 		else
-			rectangle.setFillColor(Color::Blue);
+			rectangle.setFillColor(Color::Black);
 		
 }
 
-	
 
+	void Cell::draw(RenderWindow &window) {
 
-void Cell::draw(RenderWindow &window) {
-
-	window.draw(rectangle);
-}
+		window.draw(rectangle);
+		window.draw(TargetAlive);
+	}
 

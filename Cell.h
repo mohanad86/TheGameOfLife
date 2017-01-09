@@ -7,9 +7,10 @@ class Cell {
 private:
 
 	RectangleShape rectangle;
+	RectangleShape TargetAlive;
 
 public:
-	void TargetIsAlive(int TargetAlive);
+	void SetTargetAlive(bool TargetAlive);
 	void draw(RenderWindow &window);
 	Cell();
 };
