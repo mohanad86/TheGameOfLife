@@ -1,6 +1,7 @@
 #include "Grid.h"
 #include <SFML/Graphics.hpp>
-
+using namespace std;
+using namespace sf;
 Grid::Grid()
 {
 		sf::Vector2i Grid(30, 30);
@@ -21,7 +22,7 @@ Grid::Grid()
 		
 	}
 
-void Grid::drawable(RenderWindow &grid)
+void Grid::draw(RenderWindow &window)
 {
-
+	window.draw(grid);
 }

@@ -9,12 +9,14 @@ class Grid
 {
 	Grid();
 public:
-	void drawable(RenderWindow & grid);
-
+	void Grid::draw(RenderWindow & window);
+	
 
 	
 	
 	
 private:
+	RectangleShape grid;
+
 };
 
