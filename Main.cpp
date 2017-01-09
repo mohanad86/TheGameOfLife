@@ -6,8 +6,8 @@
 int main()
 {
 
-
 	//starting with the window
+
 	sf::RenderWindow window(sf::VideoMode(400, 400), "Welcome to Mohanad Game of life");
 	sf::RectangleShape;
 	while (window.isOpen())
@@ -28,10 +28,13 @@ int main()
 				window.setView(sf::View(visibleArea));
 			}break;
 
-
 			}
+
 		}
 
+		
+		
 		window.display();
+	
 	}
 }
