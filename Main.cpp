@@ -1,14 +1,20 @@
 #include <SFML/Graphics.hpp>
 #include "Grid.h"
+#include "Cell.h"
 #include <iostream>
 #include <vector>
 #include <array>
 #include <string>
+
+using namespace sf;
+using namespace std;
 int main()
 {
 	int x = 0;
 	int y = 0;
+	
 	//starting with the window
+	Grid grid = Grid(400, 400);
 
 	sf::RenderWindow window(sf::VideoMode(400, 400), "Welcome to Mohanad Game of life");
 	sf::RectangleShape;

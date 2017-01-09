@@ -4,7 +4,7 @@ using namespace std;
 using namespace sf;
 Grid::Grid()
 {
-		sf::Vector2i Grid(30, 30);
+		sf::Vector2i Grid(400, 400);
 		sf::Texture setGrid;
 		sf::Sprite setGridSprite;
 		setGridSprite.setTexture(setGrid);

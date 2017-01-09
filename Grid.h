@@ -7,16 +7,16 @@ using namespace sf;
 
 class Grid
 {
-	Grid();
 public:
 	void Grid::draw(RenderWindow & window);
-	
+	Grid();
+	Grid(int , int );
+
 
 	
 	
 	
 private:
 	RectangleShape grid;
-
 };
 
