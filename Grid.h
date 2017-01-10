@@ -12,7 +12,6 @@ class Grid
 {
 public:
 	void Grid::draw(RenderWindow & window);
-	Grid();
 	Grid(int, int);
 	std::vector<Cell>Cell;
 	bool single_cell_width;
