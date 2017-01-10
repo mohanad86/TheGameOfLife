@@ -12,6 +12,7 @@ private:
 public:
 	void SetTargetAlive(bool TargetAlive);
 	void draw(RenderWindow &window);
+
 	Cell();
 };
 

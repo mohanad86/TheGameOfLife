@@ -20,6 +20,7 @@ int main()
 	sf::RectangleShape;
 	while (window.isOpen())
 	{
+
 		window.clear(sf::Color::White);
 		sf::Event event;
 		while (window.pollEvent(event))

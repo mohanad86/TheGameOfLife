@@ -1,7 +1,6 @@
 #include "Grid.h"
 #include <SFML/Graphics.hpp>
 
-using namespace std;
 using namespace sf;
 
 Grid::Grid(int x, int y)
@@ -11,9 +10,10 @@ Grid::Grid(int x, int y)
 	sf::Sprite setGridSprite;
 	setGridSprite.setTexture(setGrid);
 	setGridSprite.setColor(sf::Color::Blue);
-		for (int i = 0; i < Grid.x; i += single_cell_width)
+	for (int i = 0; i < Grid.x; i += cell_width[5][5])
 	{
-		for (int j = 0; j < Grid.y; j += single_cell_height)
+		 
+		for (int j = 0; j < Grid.y; j += cell_height[5][5])
 		{
 			setGridSprite.setPosition(j * 32, i * 32);	
 		}
@@ -22,7 +22,6 @@ Grid::Grid(int x, int y)
 	setGridSprite.setTextureRect(sf::IntRect(Grid.x * 20, Grid.y * 20, 20, 20));
 }
 
-	
 
 void Grid::draw(RenderWindow &window)
 {

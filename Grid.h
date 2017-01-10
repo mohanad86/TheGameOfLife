@@ -14,8 +14,12 @@ public:
 	void Grid::draw(RenderWindow & window);
 	Grid(int, int);
 	std::vector<Cell>Cell;
-	bool single_cell_width;
-	bool single_cell_height;
+	std::vector<std::vector<int>> cell;
+		bool cell_width[5][5];
+		bool cell_height[5][5];
+		bool cell_alive[5][5];
+		bool cell_die[5][5];
+	
 
 
 

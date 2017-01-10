@@ -29,7 +29,7 @@ Cell::Cell() {
 
 
 	void Cell::draw(RenderWindow &window) {
-
+		
 		window.draw(rectangle);
 		window.draw(TargetAlive);
 	}
