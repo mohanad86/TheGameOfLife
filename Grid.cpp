@@ -5,20 +5,11 @@ using namespace sf;
 
 Grid::Grid(int x, int y)
 {
-
-
-		}
-
-
-
-void Grid::draw(RenderWindow &window)
-{
 	sf::Vector2i Grid(400, 400);
 	sf::Texture setGrid;
 	sf::Sprite setGridSprite;
 	setGridSprite.setTexture(setGrid);
 	setGridSprite.setColor(sf::Color::Blue);
-
 	for (int i = 0; i < Grid.x; i += cell_width[5][5])
 	{
 
@@ -27,8 +18,13 @@ void Grid::draw(RenderWindow &window)
 			setGridSprite.setPosition(j * 32, i * 32);
 			setGridSprite.setTextureRect(sf::IntRect(Grid.x * 20, Grid.y * 20, 20, 20));
 
-			window.draw(grid);
 		}
+	}
 
-	}
-	}
+}
+
+
+void Grid::draw(RenderWindow &window)
+{
+	window.draw(grid);
+}
