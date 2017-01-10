@@ -11,7 +11,7 @@ using namespace std;
 class Grid
 {
 public:
-	void Grid::draw(RenderWindow & window);
+	void draw(RenderWindow & window);
 	Grid(int, int);
 	std::vector<Cell>Cell;
 	std::vector<std::vector<int>> cell;
