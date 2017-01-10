@@ -19,10 +19,6 @@ public:
 		
 	
 
-
-
-	
-	
 	
 private:
 	RectangleShape grid;

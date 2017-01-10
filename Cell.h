@@ -8,6 +8,11 @@ private:
 
 	RectangleShape rectangle;
 	RectangleShape TargetAlive;
+	//calling here 
+	Cell(int x, int y);
+	RectangleShape Getrectangle();
+	bool AliveTarget();
+
 
 public:
 	void SetTargetAlive(bool TargetAlive);

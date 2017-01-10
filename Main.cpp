@@ -2,9 +2,6 @@
 #include "Grid.h"
 #include "Cell.h"
 #include <iostream>
-#include <vector>
-#include <array>
-#include <string>
 
 using namespace sf;
 using namespace std;
