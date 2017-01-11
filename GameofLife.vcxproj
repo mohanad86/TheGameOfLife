@@ -18,15 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Cell.cpp" />
-    <ClCompile Include="Grid.cpp" />
-    <ClCompile Include="Main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Cell.h" />
-    <ClInclude Include="Grid.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CCED73F6-46B3-4121-A83A-F0DC30A545F8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
