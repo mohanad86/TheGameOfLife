@@ -22,7 +22,11 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="grid.cpp" />
     <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="grid.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CCED73F6-46B3-4121-A83A-F0DC30A545F8}</ProjectGuid>

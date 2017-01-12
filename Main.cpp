@@ -16,7 +16,6 @@ int main()
 		}
 		window.setActive();
 		window.display();
-		}
+	}
 
 }
-
