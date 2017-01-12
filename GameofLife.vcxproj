@@ -22,10 +22,12 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cell.cpp" />
     <ClCompile Include="grid.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cell.h" />
     <ClInclude Include="grid.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
