@@ -4,6 +4,7 @@
 //here to make easy
 using namespace sf;
 
+
 class cell
 {
 public:
@@ -17,5 +18,7 @@ public:
 	static void Setcolor(Color color);
 	//set the position
 	static void Setposition(int x, int y);
+
+
 };
 

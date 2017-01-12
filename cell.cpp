@@ -8,7 +8,7 @@ void cell::Setup(int gridWidth, int gridHeight)
 	target = RectangleShape(sf::Vector2f(gridWidth, gridHeight));
 	Setcolor(Color::White);
 	target.setOutlineThickness(1.0f);
-	target.setOutlineColor(sf::Color::Red);
+	target.setOutlineColor(sf::Color::Blue);
 
 }
 
@@ -22,3 +22,4 @@ void cell::Setposition(int x, int y) {
 	target.setPosition(x, y);
 
 }
+
