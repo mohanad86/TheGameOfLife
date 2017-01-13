@@ -20,7 +20,6 @@ int main()
 	//starting with the window 
 	sf::RenderWindow window(sf::VideoMode(grid::windowWidth, grid::windowHeight), "Welcome to Mohanad's Game Of Life");
 	bool Gamestart;
-
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -78,14 +77,15 @@ int main()
 							++count;
 						}
 						else {
-							(Gamestart = false);
-							for (int x = 0; x < gridWidth; x++) { 
+							for (int x = 0; x < gridWidth; x++) {
 								for (int y = 0; y < gridHeight; y++) {
 									drawingCells[x][y] = drawingCells[x][y];
 								}
-								
+
+
+
+							}
 						}
-						
 
 						printf("Start \n");
 					}
@@ -121,4 +121,3 @@ int main()
 		}
 	}
 }
-	}
