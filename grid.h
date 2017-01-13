@@ -11,8 +11,6 @@ public:
 	static const int y;
 	static const int windowWidth;
 	static const int windowHeight;
-	static void Generate();
-	static int aliveNeighbours(int x, int y);
 
 
 

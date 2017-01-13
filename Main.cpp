@@ -31,39 +31,37 @@ int main()
 				switch (event.key.code) {
 				case Keyboard::Escape:
 					exit(0);
+				}
+			}
 					if (event.type == sf::Event::MouseButtonPressed) {
 
-						int clickX = (event.mouseButton.x / gridWidth);
-						int clickY = (event.mouseButton.y / gridHeight);
-					
-						if (drawingCells[clickX][clickY] = 1)
-						{
-							cell::Setcolor(Color::White);
-						}
-						else if (drawingCells[clickX][clickY] = 0)
-							cell::Setcolor(Color::Blue);
+						int clickX = (event.mouseButton.x / grid::x);
+						int clickY = (event.mouseButton.y / grid::y);
+						drawingCells[clickY][clickX] = drawingCells[clickY][clickX] == 1 ? 0 : 1;
+						//checking is the mouse clicked or not
+						printf("mouse clicked \n");
 
-						}
 
 					}
-				}
-				window.clear();
-				for (size_t row = 0; row < grid::x; row++)
-				{
-					for (size_t column = 0; column < grid::y; column++)
+
+					window.clear();
+					for (size_t row = 0; row < grid::x; row++)
 					{
-						cell::Setposition((column * gridWidth), (row * gridHeight));
-						window.draw(cell::target);
+						for (size_t column = 0; column < grid::y; column++)
+						{
+							cell::Setposition((column * gridWidth), (row * gridHeight));
+							window.draw(cell::target);
 
 
 
+						}
 					}
+
 				}
+				window.display();
 
 			}
-			window.display();
 
 		}
+	
 
-	}
-		
