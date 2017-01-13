@@ -17,8 +17,6 @@ int main()
 	int drawingCells[32][32];
 	//starting with the window 
 	sf::RenderWindow window(sf::VideoMode(800,600), "Welcome to Mohanad Game Of Life");
-	cell::Setup(gridWidth, gridHeight);
-
 
 	while (window.isOpen())
 	{
