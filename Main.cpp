@@ -32,35 +32,38 @@ int main()
 				case Keyboard::Escape:
 					exit(0);
 					if (event.type == sf::Event::MouseButtonPressed) {
+
 						int clickX = (event.mouseButton.x / gridWidth);
-						int clickY = (event.mouseButton.y / gridWidth);
+						int clickY = (event.mouseButton.y / gridHeight);
+					
+						if (drawingCells[clickX][clickY] = 1)
+						{
+							cell::Setcolor(Color::White);
+						}
+						else if (drawingCells[clickX][clickY] = 0)
+							cell::Setcolor(Color::Blue);
+
+						}
 
 					}
-				 	
 				}
+				window.clear();
+				for (size_t row = 0; row < grid::x; row++)
+				{
+					for (size_t column = 0; column < grid::y; column++)
 					{
+						cell::Setposition((column * gridWidth), (row * gridHeight));
+						window.draw(cell::target);
+
+
+
 					}
 				}
-			}
-		window.clear();
-		for (size_t row = 0; row < grid::x; row++)
-		{
-			for (size_t column = 0; column < grid::y; column++)
-			{
-				int total = drawingCells[32][32];
-				if (total == 1) {
-					cell::Setcolor(Color::White);
-				}
-				else if (total == 0) {
-					cell::Setcolor(Color::Blue);
 
-				}
-				cell::Setposition((column * gridWidth), (row * gridHeight));
-				window.draw(cell::target);
 			}
-		
-				}
 			window.display();
 
-			}
 		}
+
+	}
+		
