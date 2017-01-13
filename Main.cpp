@@ -79,7 +79,11 @@ int main()
 						}
 						else {
 							(Gamestart = false);
-						
+							for (int x = 0; x < gridWidth; x++) { 
+								for (int y = 0; y < gridHeight; y++) {
+									drawingCells[x][y] = drawingCells[x][y];
+								}
+								
 						}
 						
 
@@ -117,3 +121,4 @@ int main()
 		}
 	}
 }
+	}

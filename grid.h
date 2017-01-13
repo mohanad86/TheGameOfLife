@@ -15,9 +15,6 @@ public:
 	 static const int columns = 32;
 
 
-
-
-
 	grid();
 	~grid();
 };
