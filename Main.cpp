@@ -19,7 +19,7 @@ int main()
 	int drawingCells[32][32];
 	//starting with the window 
 	sf::RenderWindow window(sf::VideoMode(grid::windowWidth, grid::windowHeight), "Welcome to Mohanad's Game Of Life");
-	bool Gamestart = false;
+	bool Gamestart;
 
 	while (window.isOpen())
 	{
@@ -48,71 +48,72 @@ int main()
 			//this will run the game 
 			if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::R)
 			{
-				bool Gamestart = true;
-				//example for starting the logic here 
-				for (size_t row = 0; row < gridHeight; row++)
-				{
-					int count = 0;
-					if (drawingCells[32 - 1][32 - 1] ) {
-						++count;
+
+				if (Gamestart = true) {
+					for (size_t row = 0; row < gridHeight; row++)
+					{
+						int count = 0;
+						if (drawingCells[32 - 1][32 - 1]) {
+							++count;
+						}
+						if (drawingCells[32 - 1][32 - 1]) {
+							++count;
+						}
+						if (drawingCells[32 + 1][32 - 1]) {
+							++count;
+						}
+						if (drawingCells[32 + 1][32]) {
+							++count;
+						}
+						if (drawingCells[32 + 1][32 + 1]) {
+							++count;
+						}
+						if (drawingCells[32][32 + 1]) {
+							++count;
+						}
+						if (drawingCells[32 - 1][32 + 1]) {
+							++count;
+						}
+						if (drawingCells[32 - 1][32]) {
+							++count;
+						}
+						else {
+							(Gamestart = false);
+						
+						}
+
+						//	grid::logicOfCurrentGeneration(drawingCells);
+						printf("Game has start enjoy \n");
 					}
-					if (drawingCells[32 - 1][32 - 1]) {
-						++count;
+
+
+					window.clear();
+
+					for (size_t row = 0; row < grid::x; row++)
+					{
+						for (size_t column = 0; column < grid::y; column++)
+						{
+							int state = drawingCells[row][column];
+							if (state == 1) {
+								cell::Setcolor(Color::White);
+							}
+							else if (state == 0) {
+								cell::Setcolor(Color::Blue);
+
+							}
+							cell::Setposition((column * gridWidth), (row * gridHeight));
+							window.draw(cell::target);
+
+						}
+
 					}
-					if (drawingCells[32 + 1 ] [32 - 1]) {
-						++count;
-					}
-					if (drawingCells[32 + 1][32]) {
-						++count;
-					}
-					if (drawingCells[32 + 1] [32 + 1]) {
-						++count;
-					}
-					if (drawingCells[32] [32+1 ]) {
-						++count;
-					}
-					if (drawingCells[32 - 1][32 + 1]) {
-						++count;
-					}
-					if (drawingCells[32 -1 ] [32]) {
-						++count;
-					}
-					return count;
+					window.display();
+
 				}
-				}
 
 
-
-
-				//	grid::logicOfCurrentGeneration(drawingCells);
-				printf("Game has start enjoy \n");
 			}
-
-
-			window.clear();
-
-			for (size_t row = 0; row < grid::x; row++)
-			{
-				for (size_t column = 0; column < grid::y; column++)
-				{
-					int state = drawingCells[row][column];
-					if (state == 1) {
-						cell::Setcolor(Color::White);
-					}
-					else if (state == 0) {
-						cell::Setcolor(Color::Blue);
-
-					}
-					cell::Setposition((column * gridWidth), (row * gridHeight));
-					window.draw(cell::target);
-
-				}
-
-			}
-			window.display();
 
 		}
-
-
 	}
-
+}
