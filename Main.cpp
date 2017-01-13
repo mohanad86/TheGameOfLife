@@ -50,44 +50,69 @@ int main()
 			{
 				bool Gamestart = true;
 				//example for starting the logic here 
-				for ( int row = 0; grid::x < 32; row++) {
-					for ( int row = 0; grid::y < 32; row++) {
-						drawingCells[32][32] = false;
-						drawingCells[32][32] = false;
+				for (size_t row = 0; row < gridHeight; row++)
+				{
+					int count = 0;
+					if (drawingCells[32 - 1][32 - 1] ) {
+						++count;
 					}
-				}
-			
-
-
-							//	grid::logicOfCurrentGeneration(drawingCells);
-							printf("Game has start enjoy \n");
-						}
-
-
-						window.clear();
-
-						for (size_t row = 0; row < grid::x; row++)
-						{
-							for (size_t column = 0; column < grid::y; column++)
-							{
-								int state = drawingCells[row][column];
-								if (state == 1) {
-									cell::Setcolor(Color::White);
-								}
-								else if (state == 0) {
-									cell::Setcolor(Color::Blue);
-
-								}
-								cell::Setposition((column * gridWidth), (row * gridHeight));
-								window.draw(cell::target);
-
-							}
-
-						}
-						window.display();
-
+					if (drawingCells[32 - 1][32 - 1]) {
+						++count;
 					}
+					if (drawingCells[32 + 1 ] [32 - 1]) {
+						++count;
+					}
+					if (drawingCells[32 + 1][32]) {
+						++count;
+					}
+					if (drawingCells[32 + 1] [32 + 1]) {
+						++count;
+					}
+					if (drawingCells[32] [32+1 ]) {
+						++count;
+					}
+					if (drawingCells[32 - 1][32 + 1]) {
+						++count;
+					}
+					if (drawingCells[32 -1 ] [32]) {
+						++count;
+					}
+					return count;
 				}
+				}
+
+
+
+
+				//	grid::logicOfCurrentGeneration(drawingCells);
+				printf("Game has start enjoy \n");
 			}
-		
-	
+
+
+			window.clear();
+
+			for (size_t row = 0; row < grid::x; row++)
+			{
+				for (size_t column = 0; column < grid::y; column++)
+				{
+					int state = drawingCells[row][column];
+					if (state == 1) {
+						cell::Setcolor(Color::White);
+					}
+					else if (state == 0) {
+						cell::Setcolor(Color::Blue);
+
+					}
+					cell::Setposition((column * gridWidth), (row * gridHeight));
+					window.draw(cell::target);
+
+				}
+
+			}
+			window.display();
+
+		}
+
+
+	}
+
