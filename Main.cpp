@@ -37,9 +37,9 @@ int main()
 			}
 			if (event.type == sf::Event::MouseButtonPressed) {
 
-				int clickX = (event.mouseButton.x / grid::x);
-				int clickY = (event.mouseButton.y / grid::y);
-				drawingCells[clickY][clickX] = drawingCells[clickY][clickX] == 1 ? 0.5 : 1;
+				int clickX = (event.mouseButton.x / gridWidth);
+				int clickY = (event.mouseButton.y / gridHeight);
+				drawingCells[clickX][clickY] = drawingCells[clickX][clickY] == 1 ? 0.5 : 1;
 
 				//checking is the mouse clicked or not
 				printf("mouse clicked \n");
