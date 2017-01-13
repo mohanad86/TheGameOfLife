@@ -13,11 +13,11 @@ public:
 
 public:
 	//setup the cell
-	static void Setup(int gridWidth, int gridHeight);
+	 static void Setup(int gridWidth, int gridHeight);
 	//set the colors
-	static void Setcolor(Color color);
+	 static void Setcolor(Color color);
 	//set the position
-	static void Setposition(int x, int y);
+	 static void Setposition(int x, int y);
 
 
 };
