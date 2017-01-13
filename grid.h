@@ -11,6 +11,10 @@ public:
 	 static const int y;
 	 static const int windowWidth;
 	 static const int windowHeight;
+	 static const int rows = 32;
+	 static const int columns = 32;
+
+
 
 
 
