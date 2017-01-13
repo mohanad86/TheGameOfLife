@@ -81,9 +81,9 @@ int main()
 							(Gamestart = false);
 						
 						}
+						
 
-						//	grid::logicOfCurrentGeneration(drawingCells);
-						printf("Game has start enjoy \n");
+						printf("Start \n");
 					}
 
 
