@@ -1,7 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "grid.h"
 #include "cell.h"
-#include <math.h>
 #include <iostream>
 
 
@@ -19,7 +18,7 @@ int main()
 	int drawingCells[32][32];
 	//starting with the window 
 	sf::RenderWindow window(sf::VideoMode(grid::windowWidth, grid::windowHeight), "Welcome to Mohanad's Game Of Life");
-	bool Gamestart;
+	bool Gamestart = false;
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -51,6 +50,7 @@ int main()
 				if (Gamestart = true) {
 					for (size_t row = 0; row < gridHeight; row++)
 					{
+
 						int count = 0;
 						if (drawingCells[32 - 1][32 - 1]) {
 							++count;
@@ -77,6 +77,7 @@ int main()
 							++count;
 						}
 						else {
+
 							for (int x = 0; x < gridWidth; x++) {
 								for (int y = 0; y < gridHeight; y++) {
 									drawingCells[x][y] = drawingCells[x][y];
