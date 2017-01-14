@@ -35,13 +35,17 @@ int main()
 				}
 			}
 			if (event.type == sf::Event::MouseButtonPressed) {
-
+				int cell = 0;
 				int clickX = (event.mouseButton.x / gridWidth);
 				int clickY = (event.mouseButton.y / gridHeight);
-				drawingCells[clickX][clickY] = drawingCells[clickX][clickY] == 1 ? 0.5 : 1;
-
-				//checking is the mouse clicked or not
-				printf("mouse clicked \n");
+					if (Mouse::isButtonPressed(Mouse::Left)) {
+						drawingCells[clickX][clickY] = drawingCells[clickX][clickY] == 1 ? 0.5 : 1;
+						cell += (clickX + clickY ? 1 : 0);
+						drawingCells[event.mouseButton.x][event.mouseButton.y];
+						//checking is the mouse clicked or not
+						printf("mouse clicked \n");
+						
+					}
 			}
 			//this will run the game 
 			if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::R)
@@ -82,8 +86,6 @@ int main()
 								for (int y = 0; y < gridHeight; y++) {
 									drawingCells[x][y] = drawingCells[x][y];
 								}
-
-
 
 							}
 						}
